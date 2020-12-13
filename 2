@@ -1,0 +1,12 @@
+from bs4 import BeautifulSoup
+pip install selenium
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+import time
+chrome_options = Options()
+chrome_options.add_argument("--headless")
+print ('Aguarde, os jornais estão sendo coletados...')
+tempo_inicial=time.time()
+driver = webdriver.Chrome(executable_path=r'C:\Users\Lucas\Downloads\Projeto_Python_Ilustre\chromedriver_win32')
+driver = webdriver.Chrome(chrome_options = chrome_options)
+driver.get('http://www.redeunissul.com.br/jornal-de-ofertas?cep=37555120')
